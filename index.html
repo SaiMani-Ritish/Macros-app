@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macros</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <main class="app-container" id="appContainer">
+        <section class="search-section">
+            <h1 class="brand-title" id="brandTitle">Macros</h1>
+            
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for food (e.g., Raw Spinach, Steak...)" 
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <circle cx="11" cy="11" r="8"></circle>
+                    </svg>
+                </button>
+            </div>
+            <p class="helper-text" id="helperText">Press Enter to search database</p>
+        </section>
+
+        <section class="results-section">
+            <div id="loader" class="loader">Searching USDA Database...</div>
+            <div id="resultsGrid" class="results-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

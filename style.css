@@ -1,0 +1,207 @@
+/* RESET & VARIABLES */
+:root {
+    --bg: #000000;
+    --card-bg: #111111;
+    --border: #333333;
+    --text-main: #ffffff;
+    --text-muted: #888888;
+    --accent: #ffffff;
+    --ease-fluid: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* APP CONTAINER */
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Starts centered */
+    padding: 20px;
+    transition: all 0.6s var(--ease-fluid);
+}
+
+/* ACTIVE STATE: MOVES EVERYTHING UP */
+.app-container.active {
+    justify-content: flex-start;
+    padding-top: 60px;
+}
+
+/* SEARCH SECTION */
+.search-section {
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.6s var(--ease-fluid);
+}
+
+/* BRAND TITLE */
+.brand-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+    transition: opacity 0.3s ease;
+}
+
+/* Hide title when searching to save space */
+.app-container.active .brand-title {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute; 
+    top: -50px;
+}
+
+/* INPUT WRAPPER */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    font-size: 1.1rem;
+    padding: 18px 50px 18px 24px;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #555;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+.search-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.search-btn:hover {
+    color: var(--text-main);
+}
+
+.helper-text {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: opacity 0.3s;
+}
+
+.app-container.active .helper-text {
+    opacity: 0;
+}
+
+/* RESULTS GRID */
+.results-section {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease 0.3s; /* Delay fade in until search moves up */
+}
+
+.app-container.active .results-section {
+    opacity: 1;
+    pointer-events: auto;
+    margin-top: 40px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+/* CARD DESIGN */
+.food-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.food-card:hover {
+    border-color: #555;
+    transform: translateY(-2px);
+}
+
+.food-name {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: capitalize;
+    color: var(--text-main);
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--border);
+    width: 100%;
+}
+
+.macros-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.macro-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.macro-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.macro-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* LOADER */
+.loader {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 20px;
+    display: none;
+    font-size: 0.9rem;
+}
