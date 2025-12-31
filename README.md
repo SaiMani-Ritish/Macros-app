@@ -5,13 +5,7 @@ A modern, minimalist web application that allows users to search for nutritional
 
 The interface features a fluid "search-first" design: the search bar starts at the center of the screen and animates to the top upon interaction, revealing a grid of nutritional cards.
 
-## ✨ Features
-
-* **Fluid Animations:** Smooth transition from "Welcome" state to "Results" state.
-* **Minimal Design:** Strict Black & White aesthetic (Dark Mode).
-* **Real Data:** Fetches live data from the USDA FoodData Central database.
-* **Macro Breakdown:** Automatically extracts and calculates Energy (kcal), Protein, Carbs, and Fats.
-* **Zero Dependencies:** Built with pure HTML, CSS, and Vanilla JavaScript. No framework installation required.
+Built with pure HTML, CSS, and Vanilla JavaScript. No framework installation required.
 
 ## 📂 Project Structure
 
@@ -24,7 +18,7 @@ The interface features a fluid "search-first" design: the search bar starts at t
 
 ```
 
-## 🚀 How to Run
+##  How to Run
 
 1. **Download the files:** Ensure `index.html`, `style.css`, and `script.js` are in the same folder.
 2. **Get an API Key:**
@@ -43,7 +37,7 @@ The interface features a fluid "search-first" design: the search bar starts at t
 
 
 
-## ⚙️ Configuration
+## Configuration
 
 ### Switching Data Types
 
@@ -58,7 +52,7 @@ By default, the app filters for "Foundation" and "SR Legacy" foods to ensure hig
 
 ```
 
-## 🎨 Customization
+## Customization
 
 You can change the color scheme, by opening `style.css` and modifying the CSS variables at the top:
 
@@ -72,10 +66,6 @@ You can change the color scheme, by opening `style.css` and modifying the CSS va
 
 ```
 
-## 📄 License
+## License
 
 This project is open source and available for personal or educational use.
-
-```
-
-```
