@@ -7,7 +7,7 @@ The interface features a fluid "search-first" design: the search bar starts at t
 
 Built with pure HTML, CSS, and Vanilla JavaScript. No framework installation required.
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 /usda-macro-explorer
