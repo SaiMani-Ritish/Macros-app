@@ -2,7 +2,7 @@
 // 🔑 USDA CONFIGURATION
 // ==========================================
 // Get your key here: https://fdc.nal.usda.gov/api-key-signup.html
-const API_KEY = 'Demo_key'; // Replace with your real key if DEMO hits limits
+const API_KEY = 'sSajQcq8PYn8fEtxqRHkJizKnixZ2ixsTlNXh69W'; // Replace with your real key if DEMO hits limits
 const BASE_URL = 'https://api.nal.usda.gov/fdc/v1/foods/search';
 
 // DOM Elements
